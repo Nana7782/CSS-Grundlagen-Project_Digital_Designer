@@ -56,6 +56,12 @@ h2{
 
 h3{
     font-family: "WorkSans";
+    font-size: 11.25rem;
+    text-align: center;
+    color: var(--secondary-color);
+    font-weight: lighter;
+    letter-spacing: -1.25rem;
+    padding: 8rem auto;
 }
 button{
     font-family: "Fjalla";
@@ -179,3 +185,66 @@ div p:last-of-type{
 .p-black {
     color: var(--last-color);
 }
+
+section:last-of-type{
+    background-color: var(--third-color);
+    padding: 5rem 10rem;
+}
+section:last-of-type p:first-of-type{
+    color: var(--last-color);
+    font-size: 2.2rem;
+    font-weight: lighter;
+    margin-left: 60rem;
+    margin-top: 10rem;
+}
+
+section:last-of-type p:last-of-type{
+    color: var(--secondary-color);
+    font-size: 4rem;
+    margin-left: 60rem;
+    margin-top: 5rem;
+    margin-bottom: 5rem;
+}
+footer {
+    padding-top: 12rem;
+}
+footer a{
+    display: block;
+    font-family: "Didact";
+    font-size: 12rem;
+    text-decoration: none;
+    text-align: center;
+    color: var(--third-color);
+    margin: 7.5rem auto;
+}
+
+footer a:hover{
+    text-decoration: underline;
+}
+
+.heart span{
+    display: block;
+    margin: 0 auto;
+    font-size: 3rem;
+    text-align: center;
+    animation: beat 1.5s ease 0s infinite;
+}
+.heart:before {
+    z-index: -2;
+    animation: beat-before 1.5s ease-out 200ms infinite;}
+    
+  .heart:after {
+    z-index: -1;
+    animation: beat-after 1.5s ease-out 400ms infinite;}
+  
+  @keyframes beat {
+    0% { transform: scale(1);}
+    50% { transform: scale(2.1);}}
+  
+  @keyframes beat-before {
+    0% { transform: scale(1);}
+    50% { transform: scale(0.8);}}
+  
+  @keyframes beat-after {
+    0% { transform: scale(1);  }
+    50% { transform: scale(1.6);}}
