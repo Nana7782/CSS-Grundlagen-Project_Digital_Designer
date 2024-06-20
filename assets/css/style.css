@@ -48,10 +48,8 @@ h1 {
     margin: 6rem 1rem;
 }
 
-
 h2{
     font-size: 11rem;
-    color: var(--secondary-color);
     font-weight: lighter;
     margin: 2rem 0;
 }
@@ -82,23 +80,25 @@ div {
 .parallax1 {
     background-image: url("../img/portfolio2.jpg");
     height: 100vh;
-
 }
 .parallax2 {
     background-image: url("../img/portfolio3.png");
     height: 100vh;
-
-
 }
 .parallax3 {
     background-image: url("../img/portfolio4.jpg");
     height: 100vh;
-
 }
 .parallax4 {
     background-image: url("../img/portfolio5.png");
     height: 100vh;
+}
 
+.parallax1 h2, .parallax3 h2 {
+    color: var(--secondary-color);
+}
+.parallax2 h2, .parallax4 h2 {
+    color: var(--third-color);
 }
 
 section:first-of-type {
@@ -115,11 +115,14 @@ section:first-of-type p:last-of-type{
     margin: 4rem 0;
 }
 
-div p{
+.parallax1 p, .parallax3 p{
     font-size: 2rem;
     color: var(--primary-color);
 }
-
+.parallax2 p, .parallax4 p{
+    font-size: 2rem;
+    color: var(--last-color);
+}
 
 /* div p:nth-of-type(2){
     color: var(--primary-color);
@@ -136,7 +139,23 @@ div p:last-of-type{
     
 }
 
-button{
+.btn-white:hover {
+    background-color: var(--secondary-color);
+    color: var(--third-color);
+}
+.btn-white:hover + .p-white {
+    color: var(--secondary-color);
+}
+
+.btn-black:hover {
+    background-color: var(--third-color);
+    color: var(--secondary-color);
+}
+.btn-black:hover + .p-black {
+    color: var(--third-color);
+}
+
+.btn-white{
     display: inline;
     height: 52px;
     width: 96px;
@@ -144,4 +163,19 @@ button{
     background-color: rgb(255, 255, 255, 0.1);
     color: var(--secondary-color);
     margin-top: 8rem;
+}
+.btn-black{
+    display: inline;
+    height: 52px;
+    width: 96px;
+    border: 2px solid var(--third-color);
+    background-color: rgb(255, 255, 255, 0);
+    color: var(--third-color);
+    margin-top: 8rem;
+}
+.p-white {
+    color: var(--primary-color);
+}
+.p-black {
+    color: var(--last-color);
 }
